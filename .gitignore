@@ -1,0 +1,22 @@
+# Windows / macOS filesystem cruft
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+._*
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*~
+
+# Packaged copies of this site. The repository is the source of truth; the
+# zip is only ever built for handing to someone who is not using git.
+*.zip
+
+# Scratch and probe files used while testing
+_probe.html
+_*.html

@@ -1,0 +1,23 @@
+# Netlify / Cloudflare Pages redirect rules.
+#
+# The old WordPress site used different paths from this one. Anything already
+# linking to those URLs (Google results, the Linktree, Instagram bio links,
+# directory listings) must not land on a 404 the day this goes live, so each
+# old path is permanently redirected to its replacement.
+#
+# Vercel users: these same rules are in vercel.json instead.
+# Any other host: set up the equivalent 301s before switching the domain over.
+
+/upcoming-events    /events.html        301
+/upcoming-events/*  /events.html        301
+/venue              /venue.html         301
+/venue/*            /venue.html         301
+/membership         /membership.html    301
+/membership/*       /membership.html    301
+/inquire            /inquire.html       301
+/inquire/*          /inquire.html       301
+
+# Convenience aliases, so short URLs work in print and on social.
+/events             /events.html        301
+/join               /membership.html    301
+/contact            /inquire.html       301

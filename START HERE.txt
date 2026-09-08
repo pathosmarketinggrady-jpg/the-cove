@@ -1,0 +1,57 @@
+THE COVE SOCIAL CLUB
+Website files
+===============================================================================
+
+EXTRACT THIS FOLDER FIRST.
+
+Do not open the website from inside the zip. Right-click the zip, choose
+"Extract All", pick a location, then open the extracted folder. If you open
+index.html from inside the zip it will look broken, because Windows does not
+give the page access to its stylesheet or images until the files are extracted.
+
+
+TO VIEW THE SITE
+-------------------------------------------------------------------------------
+Double-click index.html. It opens in your browser. No internet connection is
+needed. Nothing needs installing.
+
+
+THE PAGES
+-------------------------------------------------------------------------------
+index.html        Home. Hero, the weekly calendar, The Wednesday Pour,
+                  the Fall Cohort offer, the spaces.
+events.html       The full events calendar.
+venue.html        The four spaces and private hire.
+membership.html   The Fall Membership Cohort offer and member privileges.
+inquire.html      Contact details and an enquiry form.
+
+
+TWO THINGS STILL NEEDED FROM THE CLUB
+-------------------------------------------------------------------------------
+These are marked on the site as "to be announced" rather than guessed at.
+Send them over and they take a few minutes to drop in.
+
+  1. START TIMES for all five recurring events. Nothing on the site claims a
+     time right now, because none were supplied.
+
+  2. THE SATURDAY DJ'S NAME. The Saturday Day Party card currently reads
+     "DJ to be announced".
+
+
+TWO THINGS TO CHECK BEFORE LAUNCH
+-------------------------------------------------------------------------------
+  * OPENING HOURS are deliberately not published anywhere on this site. The
+    hours listed on the third-party directories (Monday to Thursday, closing
+    at 4 PM) cannot be right alongside Thursday trivia nights and Wednesday
+    evening wine service. Confirm the real trading hours before adding any.
+
+  * TWO MEMBERSHIP APPLICATION LINKS are live on the current site, one on
+    joinit.com and one on thecovevip.raklet.com. This site uses the joinit
+    one. Confirm which is current and retire the other.
+
+
+QUESTIONS
+-------------------------------------------------------------------------------
+README.md in this folder has the full technical notes: how to edit the
+calendar, how to change the membership pricing, how to hook the enquiry form
+up to a real inbox, and how to publish the site.

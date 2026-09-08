@@ -1,0 +1,27 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "cleanUrls": true,
+  "trailingSlash": false,
+
+  "redirects": [
+    { "source": "/upcoming-events", "destination": "/events", "permanent": true },
+    { "source": "/upcoming-events/:path*", "destination": "/events", "permanent": true },
+    { "source": "/join", "destination": "/membership", "permanent": true },
+    { "source": "/contact", "destination": "/inquire", "permanent": true }
+  ],
+
+  "headers": [
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
+    },
+    {
+      "source": "/(css|js)/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=3600, must-revalidate" }
+      ]
+    }
+  ]
+}
