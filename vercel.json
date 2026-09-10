@@ -1,13 +1,13 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "cleanUrls": true,
+  "cleanUrls": false,
   "trailingSlash": false,
 
   "redirects": [
-    { "source": "/upcoming-events", "destination": "/events", "permanent": true },
-    { "source": "/upcoming-events/:path*", "destination": "/events", "permanent": true },
-    { "source": "/join", "destination": "/membership", "permanent": true },
-    { "source": "/contact", "destination": "/inquire", "permanent": true }
+    { "source": "/upcoming-events", "destination": "/events.html", "permanent": true },
+    { "source": "/upcoming-events/:path*", "destination": "/events.html", "permanent": true },
+    { "source": "/join", "destination": "/membership.html", "permanent": true },
+    { "source": "/contact", "destination": "/inquire.html", "permanent": true }
   ],
 
   "headers": [
