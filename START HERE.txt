@@ -40,10 +40,11 @@ Send them over and they take a few minutes to drop in.
 
 TWO THINGS TO CHECK BEFORE LAUNCH
 -------------------------------------------------------------------------------
-  * OPENING HOURS are deliberately not published anywhere on this site. The
-    hours listed on the third-party directories (Monday to Thursday, closing
-    at 4 PM) cannot be right alongside Thursday trivia nights and Wednesday
-    evening wine service. Confirm the real trading hours before adding any.
+  * OPENING HOURS are now published in the footer of every page. Saturday
+    (12 to 3 PM) came from the club. The other six days were carried over
+    from the hours already listed online and are NOT confirmed: those same
+    listings put Saturday at 6 AM to 10 PM, which the club has since
+    contradicted. Get all seven checked by the owner. See README.md.
 
   * TWO MEMBERSHIP APPLICATION LINKS are live on the current site, one on
     joinit.com and one on thecovevip.raklet.com. This site uses the joinit

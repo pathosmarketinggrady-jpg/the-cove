@@ -52,12 +52,47 @@ var CLUB = {
      a login, get the current URL from the club and add it back. */
   apply: "https://app.joinit.com/o/the-cove-social-club/",
 
-  /* Opening hours are deliberately NOT published here. The hours carried by
-     the third-party directories (Mon-Thu to 4 PM) cannot be reconciled with
-     Thursday trivia nights or Wednesday evening wine service. Get the real
-     trading hours from the club before putting any on the site. */
-  hours: null
+  /* Opening hours.
+
+     SATURDAY came from the club on 25 September 2026 and is the one day that
+     is confirmed first-hand.
+
+     THE OTHER SIX are the hours that were already listed for the club online,
+     carried over on the owner's instruction. They are NOT first-hand: the old
+     covesocial.com is gone (the domain now serves this site), there is no
+     Wayback snapshot of it, and Visit Jacksonville and the Jax Chamber list no
+     hours at all. They come from third-party directory data (Yelp / Apple
+     Maps), which two separate searches returned identically.
+
+     Treat them as unverified, for two reasons. The same listings put SATURDAY
+     at 6 AM to 10 PM, which the club has now contradicted outright, and they
+     still advertise the cigar lounge the club has confirmed does not exist. A
+     6 AM open also looks more like café hours than club hours. Get all seven
+     confirmed by the owner and correct anything that is wrong.
+
+     To change a day, edit it here AND in the HOURS block in every footer AND
+     in the openingHoursSpecification in index.html. The markers are listed in
+     README.md. */
+  hours: {
+    monday:    "6 AM to 4 PM",
+    tuesday:   "6 AM to 4 PM",
+    wednesday: "6 AM to 4 PM",
+    thursday:  "6 AM to 4 PM",
+    friday:    "6 AM to 11 PM",
+    saturday:  "12 to 3 PM",
+    sunday:    "10 AM to 6 PM"
+  }
 };
+
+/* The footers print the week grouped rather than as seven rows, because
+   Monday through Thursday share one set of hours. Keep this in step with
+   CLUB.hours above. */
+var HOURS_GROUPED = [
+  { days: "Mon to Thu", hours: "6 AM to 4 PM" },
+  { days: "Friday",     hours: "6 AM to 11 PM" },
+  { days: "Saturday",   hours: "12 to 3 PM" },
+  { days: "Sunday",     hours: "10 AM to 6 PM" }
+];
 
 /* --------------------------------------------------------------- EVENTS
    `day` drives the "tonight at the cove" highlight, so it must stay one of

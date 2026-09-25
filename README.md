@@ -87,12 +87,44 @@ existing site would help people find the accounts.
 
 These were flagged rather than silently resolved.
 
-**1. The published opening hours cannot be right.**
-Third-party directories list Monday to Thursday closing at 4 PM. That cannot
-coexist with Thursday trivia nights or Wednesday evening wine service. **No
-opening hours appear anywhere on this site.** `CLUB.hours` in `js/data.js` is
-deliberately `null`. Get the real trading hours from the club before adding
-any.
+**1. Six of the seven published opening hours are unverified. Get them checked.**
+
+Opening hours are now live in every footer, on the enquiry page, and in the
+home page's `openingHoursSpecification`:
+
+| Day | Published | Source |
+|---|---|---|
+| Mon to Thu | 6 AM to 4 PM | Directory data, **unverified** |
+| Friday | 6 AM to 11 PM | Directory data, **unverified** |
+| Saturday | 12 to 3 PM | **The club, 25 September 2026** |
+| Sunday | 10 AM to 6 PM | Directory data, **unverified** |
+
+Only Saturday came from the club. The other six were carried over on the
+owner's instruction as "the old hours that were already listed", and they need
+confirming, because:
+
+- **The old site is gone.** `covesocial.com` now 302-redirects to
+  `the-cove-t4l7.vercel.app`, which serves this site, so the previous
+  WordPress hours could not be read off it. There is **no Wayback snapshot**
+  of it either.
+- Visit Jacksonville and the Jax Chamber list **no hours at all**, and Yelp
+  returns 403 to direct fetching. The six days come from third-party directory
+  data (Yelp / Apple Maps) that two separate searches returned identically.
+  **No page was opened to confirm them.**
+- **The same listings put Saturday at 6 AM to 10 PM**, which the club has now
+  contradicted outright. If Saturday was that wrong, the rest may be too.
+- Those listings also still advertise the **cigar lounge that does not exist**
+  (see point 4), so they are known to be stale.
+- A **6 AM open** reads more like café hours than club hours, and Monday to
+  Thursday closing at 4 PM still sits oddly beside Thursday trivia and
+  Wednesday evening wine service. The enquiry page carries a line saying event
+  nights can run later than the listed times.
+
+To correct a day, edit it in `CLUB.hours` **and** `HOURS_GROUPED` in
+`js/data.js`, **and** in the `HOURS` block in all six footers and the enquiry
+page's Hours card, **and** in the `openingHoursSpecification` in `index.html`.
+The footers print the week grouped, because Monday to Thursday currently
+share one set of hours; if that stops being true, the grouping has to change.
 
 **2. The second membership application portal is dead.**
 `app.joinit.com/o/the-cove-social-club/` is linked from the current membership
@@ -157,6 +189,10 @@ between its marker comments:
 - `<!-- WEEK:START -->` … `<!-- WEEK:END -->` in `index.html` **and** `events.html`
 - `<!-- OFFER:START -->` and `<!-- PRIVILEGES:START -->` in `membership.html`
 - `<!-- SPACES:START -->` in `venue.html`
+- `<!-- HOURS:START -->` … `<!-- HOURS:END -->` in the footer of **all six**
+  HTML files, plus a second one on `inquire.html` for the Hours contact card.
+  The home page also carries the hours in its `openingHoursSpecification`
+  structured data, which is a third place to keep in step.
 
 Keep the two in step. If a price changes in one and not the other, the page
 shows one number and the data file says another.
@@ -304,9 +340,9 @@ honest "to be announced" rather than a guess:
   - **Start times** for all five recurring events
   - **The Saturday DJ's name**
 
-And see the conflicts section above: the **opening hours** are still unresolved
-and deliberately appear nowhere, and there are **two Facebook pages** splitting
-the club's followers.
+And see the conflicts section above: **six of the seven published opening hours
+are unverified directory data** and should be confirmed with the owner, and
+there are **two Facebook pages** splitting the club's followers.
 
 ---
 
