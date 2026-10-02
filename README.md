@@ -51,7 +51,7 @@ Every outbound link on the site was requested and checked, not assumed.
 | `linktr.ee/covesocial` | **Live**, 200 |
 | `app.joinit.com/o/the-cove-social-club/` | **Live**, 200, page mentions The Cove |
 | Google Maps address link | **Live**, 200, opens the correct search |
-| `tel:+19044656568` | Correct E.164 format for (904) 465-6568 |
+| `tel:+19047527235` | Correct E.164 format for (904) 752-7235 |
 | `mailto:info@covesocial.com` | Correct, matches the club's published address |
 | ~~`thecovevip.raklet.com/login`~~ | **DEAD — 410 Gone. Removed from the site.** |
 | ~~`thecovevip.raklet.com/apply`~~ | **DEAD — 410 Gone. Not used.** |
@@ -402,7 +402,7 @@ away and the calendar prints on white.
 ## Related
 
 Petronita's, the Southern and Latin restaurant, shares the building at 1349 N.
-Market Street and the phone number 904.465.6568. Cove members receive 10% off
+Market Street (The Cove's own line is 904.752.7235). Cove members receive 10% off
 dining there and priority reservations. The two sites are deliberately built to
 look nothing alike: Petronita's is warm cream and gold, The Cove is midnight and
 brass.

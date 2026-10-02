@@ -27,8 +27,8 @@ var CLUB = {
     neighbourhood:"Historic Springfield"
   },
 
-  phone:     "904.465.6568",
-  phoneHref: "+19044656568",
+  phone:     "904.752.7235",
+  phoneHref: "+19047527235",
   email:     "info@covesocial.com",
 
   maps: "https://www.google.com/maps/search/?api=1&query=1349+N+Market+Street+Jacksonville+FL+32206",
