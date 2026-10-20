@@ -515,6 +515,40 @@ p:last-child { margin-bottom: 0; }
 }
 .ev.is-today .ev__today-flag { display: block; }
 
+/* A single dated event, shown on its own with a date block instead of in the
+   weekly grid. The JS lights it on the day itself via data-date. */
+.ev--feature {
+  display: grid; grid-template-columns: auto minmax(0, 1fr);
+  gap: clamp(1.5rem, 1rem + 3vw, 4rem); align-items: center;
+  border: 1px solid var(--line-2);
+  padding: clamp(1.8rem, 1.2rem + 2.6vw, 3.2rem);
+}
+.ev--feature::before { transform: scaleX(1); }
+.ev__date {
+  display: flex; flex-direction: column; align-items: center; margin: 0;
+  padding-right: clamp(1.5rem, 1rem + 3vw, 4rem);
+  border-right: 1px solid var(--line-2); text-align: center;
+}
+.ev__date-w, .ev__date-m {
+  font-family: var(--display); font-size: var(--t-xs); font-weight: 600;
+  letter-spacing: .24em; text-transform: uppercase; color: var(--acc-t);
+}
+.ev__date-d {
+  font-family: var(--serif); font-size: var(--t-4xl); line-height: 1;
+  color: var(--paper); font-variant-numeric: lining-nums; margin: .35rem 0;
+}
+.ev--feature > div { display: flex; flex-direction: column; gap: .8rem; }
+.ev--feature .ev__name { font-size: var(--t-3xl); }
+.ev--feature .ev__when { margin-top: var(--s3); padding-top: 0; }
+@media (max-width: 560px) {
+  .ev--feature { grid-template-columns: 1fr; }
+  .ev__date {
+    flex-direction: row; align-items: baseline; gap: .8rem;
+    padding: 0 0 var(--s5); border-right: 0; border-bottom: 1px solid var(--line-2);
+  }
+  .ev__date-d { font-size: var(--t-3xl); margin: 0; }
+}
+
 /* A bordered callout panel, used for the side panels on the enquiry page. */
 .season {
   --acc: var(--teal); --acc-t: var(--teal-t);

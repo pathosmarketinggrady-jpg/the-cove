@@ -95,15 +95,22 @@
     return d.getMonth() !== date.getMonth();
   }
 
+  function pad(n) { return (n < 10 ? '0' : '') + n; }
+
   (function tonight() {
-    var cards = $$('[data-day]');
+    var cards = $$('[data-day], [data-date]');
     if (!cards.length) { return; }
 
     function paint() {
       var now = new Date();
       var today = DAYS[now.getDay()];
+      var iso = now.getFullYear() + '-' + pad(now.getMonth() + 1) + '-' + pad(now.getDate());
       cards.forEach(function (c) {
-        var match = c.getAttribute('data-day') === today;
+        /* A one-off event carries data-date (YYYY-MM-DD) and is lit only on
+           that date; a recurring one carries data-day. */
+        var match = c.hasAttribute('data-date')
+          ? c.getAttribute('data-date') === iso
+          : c.getAttribute('data-day') === today;
         if (match && c.hasAttribute('data-monthly')) {
           match = isLastOfMonthWeekday(now);
         }

@@ -1,7 +1,7 @@
 /* ===========================================================================
    The Cove Social Club, data.js
    ---------------------------------------------------------------------------
-   The single source of truth for the club's details, the recurring events
+   The single source of truth for the club's details, the events
    calendar and the membership offer.
 
    Everything here is ALSO written into the HTML at build time, between marker
@@ -27,8 +27,8 @@ var CLUB = {
     neighbourhood:"Historic Springfield"
   },
 
-  phone:     "904.465.6568",
-  phoneHref: "+19044656568",
+  phone:     "904.752.7235",
+  phoneHref: "+19047527235",
   email:     "info@covesocial.com",
 
   maps: "https://www.google.com/maps/search/?api=1&query=1349+N+Market+Street+Jacksonville+FL+32206",
@@ -95,63 +95,24 @@ var HOURS_GROUPED = [
 ];
 
 /* --------------------------------------------------------------- EVENTS
-   `day` drives the "tonight at the cove" highlight, so it must stay one of
-   the seven English day names. `cadence` is what the card prints. */
+   On 20 October 2026 the club asked for every recurring night (The Wednesday
+   Pour, Trivia Night, Latin Night, the Saturday Day Party and Sunday Brunch)
+   to come off the site, replaced by one dated event. A one-off event carries
+   `date` (YYYY-MM-DD), which the HTML writes as data-date so the card is lit
+   on that day only. */
 var EVENTS = [
   {
-    id: "wednesday-pour",
+    id: "studio-1975",
+    date: "2026-10-28",
     day: "Wednesday",
-    name: "The Wednesday Pour",
-    cadence: "Every Wednesday",
-    note: "Wine, small plates, music and conversation. A different theme every week.",
-    accent: "wine",
-
-    /* The club supplied a strapline and four rotating wine themes, and both
-       were built as a feature band on the home and events pages. The club
-       then asked for that band to be removed, so NEITHER of the two fields
-       below is rendered anywhere on the site any more. They are kept here so
-       the information is not lost, and so the themes are to hand if they are
-       ever wanted back, most likely folded into the note above. */
-    strapNotRendered: ["Wine", "Small Plates", "Music", "Conversation"],
-    themesNotRendered: ["Cabernet Night", "Rosé Evening", "Old World vs. New World", "Bubbles"]
-  },
-  {
-    id: "trivia",
-    day: "Thursday",
-    name: "Trivia Night",
-    cadence: "Every Thursday",
-    accent: "steel"
-  },
-  {
-    id: "latin-night",
-    day: "Friday",
-    name: "Latin Night",
-    cadence: "Last Friday of every month",
-    accent: "ember",
-    monthly: true
-  },
-  {
-    id: "saturday-day-party",
-    day: "Saturday",
-    name: "Saturday Day Party",
-    cadence: "Every Saturday",
-    with: null,              /* DJ name not yet supplied by the club */
-    withTba: true,
-    accent: "brass"
-  },
-  {
-    id: "sunday-brunch",
-    day: "Sunday",
-    name: "Sunday Brunch Day Party",
-    cadence: "Every Sunday",
-    with: "DJ Zenergy",
+    name: "Studio 1975",
+    note: "Open to the public. Members and non-members alike are welcome.",
     accent: "brass"
   }
 ];
 
-/* Start times have not been supplied for any recurring event. While this is
-   true the pages print an honest note instead of inventing a time. Set to
-   false once real times are added to each event above as `time: "7 PM"`. */
+/* No start time has been supplied. While this is true the card prints an
+   honest "time to be announced" chip instead of inventing one. */
 var TIMES_TBA = true;
 
 /* ----------------------------------------------------------- MEMBERSHIP */
