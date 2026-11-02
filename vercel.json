@@ -4,8 +4,10 @@
   "trailingSlash": false,
 
   "redirects": [
-    { "source": "/upcoming-events", "destination": "/events.html", "permanent": true },
-    { "source": "/upcoming-events/:path*", "destination": "/events.html", "permanent": true },
+    { "source": "/upcoming-events", "destination": "/", "permanent": true },
+    { "source": "/upcoming-events/:path*", "destination": "/", "permanent": true },
+    { "source": "/events", "destination": "/", "permanent": true },
+    { "source": "/events.html", "destination": "/", "permanent": true },
     { "source": "/join", "destination": "/membership.html", "permanent": true },
     { "source": "/contact", "destination": "/inquire.html", "permanent": true }
   ],

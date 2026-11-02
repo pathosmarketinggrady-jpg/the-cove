@@ -18,24 +18,19 @@ needed. Nothing needs installing.
 
 THE PAGES
 -------------------------------------------------------------------------------
-index.html        Home. Hero, the upcoming event (Studio 1975),
-                  the Fall Cohort offer, the spaces.
-events.html       The events page.
+index.html        Home. Hero, the Fall Cohort offer, the spaces.
 venue.html        The four spaces and private hire.
 membership.html   The Fall Membership Cohort offer and member privileges.
 inquire.html      Contact details and an enquiry form.
 
 
-TWO THINGS STILL NEEDED FROM THE CLUB
+EVENTS
 -------------------------------------------------------------------------------
-These are marked on the site as "to be announced" rather than guessed at.
-Send them over and they take a few minutes to drop in.
-
-  1. THE START TIME for Studio 1975 (Wednesday, October 28). The card reads
-     "Time to be announced" until one is supplied.
-
-  2. Any description of Studio 1975 the club wants on the card. Right now it
-     only says it is open to the public.
+The events page and the home page calendar were removed on 2 November 2026
+at the club's request. The old events.html is kept, outside the site, in
+Downloads\Cove website backup (removed pages) in case it is wanted back.
+Old event links (/events, /events.html, /upcoming-events) redirect to the
+home page.
 
 
 TWO THINGS TO CHECK BEFORE LAUNCH
